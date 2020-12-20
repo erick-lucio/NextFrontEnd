@@ -1,15 +1,21 @@
 {
-  "name": "learn-starter",
+  "name": "next_project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "cbuild": "heroku container:push web",
+    "cdeploy": "heroku container:release web",
+    "cbd": "heroku container:push web && heroku container:release web",
+    "logs": "heroku logs --tail" 
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "next": "^10.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reactstrap": "^8.7.1"
   }
 }
